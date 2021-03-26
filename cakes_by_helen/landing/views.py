@@ -1,17 +1,20 @@
 from django.http import HttpResponse, JsonResponse, Http404
 from django.template import loader
-from django.template.loader import render_to_string
-from django.views.decorators.csrf import csrf_exempt
 from landing.forms import OrderForm
+from django.conf import settings
+from landing.models import ImageGallery
+import os
 
 
 def index(request):
     template = loader.get_template('index.html')
-    context = {}
+    images = ImageGallery.objects.all()
+    context = {
+        'images': images
+    }
     return HttpResponse(template.render(context, request))
 
 
-@csrf_exempt
 def submit_form(request):
     if request.method == 'POST' and request.is_ajax():
         form = OrderForm(request.POST)

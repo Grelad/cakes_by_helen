@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body {
-            font-family: arial;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!--        body {-->
+<!--            font-family: arial;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--            box-sizing: border-box;-->
+<!--        }-->
 
-        .main-site {
-            padding-top: 5px;
-            width: 95%;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+<!--        .main-site {-->
+<!--            padding-top: 5px;-->
+<!--            width: 95%;-->
+<!--            max-width: 960px;-->
+<!--            margin: 0 auto;-->
+<!--        }-->
 
         #popup-1 {
             display: none;
@@ -55,6 +55,8 @@
                 integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
                 crossorigin="anonymous"></script>
     <script  type="text/javascript" src="static/js/submit_form.js"></script>
+	{% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div id="popup-1">
@@ -94,6 +96,141 @@
         </div>
     </div>
 
+    <div class="parallax-mirror" style="visibility: visible; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; transform: translate3d(0px, 0px, 0px); height: 700px; width: 1046px;">
+        <img class="parallax-slider" src="media/1.jpg" style="transform: translate3d(-1px, 0px, 0px); position: absolute; height: 700px; width: 1049px; max-width: none;">
+    </div>
+
+	<!-- NAVBAR
+	================================================== -->
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+		<div class="container">
+
+			<!-- Navbar: Brand -->
+			<a class="navbar-brand d-lg-none" href="index.html">Touché</a>
+
+			<!-- Navbar: Toggler -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Navbar: Collapse -->
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<!-- Navbar navigation: Left -->
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="about-us.html">About Us</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Menu
+						</a>
+						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
+							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
+							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="reservation.html">Reservation</a>
+					</li>
+				</ul>
+
+				<!-- Navbar: Brand -->
+				<a class="navbar-brand d-none d-lg-flex" href="index.html">
+					Touché
+				</a>
+
+				<!-- Navbar navigation: Right -->
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="news-and-events.html">News &amp; Events</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">Gallery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact-us.html">Contact</a>
+					</li>
+				</ul>
+
+			</div> <!-- / .navbar-collapse -->
+
+		</div> <!-- / .container -->
+	</nav> <!-- / .navbar -->
+
+	<!-- WELCOME
+	================================================== -->
+	<section class="section section_welcome" data-parallax="scroll" data-image-src="media/1.jpg">
+
+		<!-- Content -->
+		<div class="section_welcome__main">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col">
+
+						<!-- Heading -->
+						<h2 class="section__preheading section_welcome__preheading text-center text-muted">
+							<span class="text-primary">Café</span> / Restaurant
+						</h2>
+						<h1 class="section__heading section_welcome__heading text-center">
+							Touché
+						</h1>
+						<p class="section__subheading section_welcome__subheading text-center text-muted">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non illo, alias animi iusto neque, sint corrupti? Laudantium, dignissimos id excepturi facilis, facere saepe quasi placeat praesentium ipsa sapiente illo molestiae?
+						</p>
+
+						<!-- Button -->
+						<div class="text-center">
+							<a href="#section_reservation" class="btn btn-primary text-white">
+								Make reservation
+							</a>
+						</div>
+
+					</div>
+				</div> <!-- / .row -->
+			</div> <!-- / .container -->
+		</div>
+
+		<!-- Footer -->
+		<div class="section_welcome__footer">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-md">
+
+						<!-- Social links -->
+						<ul class="section_welcome__footer__social text-center text-lg-left">
+							<li>
+								<a href="#">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="col-md">
+
+						<!-- Address -->
+						<div class="section_welcome__footer__address text-center text-lg-right">
+							<i class="fas fa-map-marker-alt"></i> 1234 Altschul, New York, NY 10027-0000
+						</div>
+
+					</div>
+				</div> <!-- / .row -->
+			</div> <!-- / .container -->
+		</div>
+
+	</section>
+
     <div class="main-site">
         <h1>Webpage</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -103,6 +240,16 @@
         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <button id="open-popup-1">Open Popup</button>
+
+        <div class="row">
+            {% for img in images %}
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                    <a href="#" class="d-block mb-4 h-100">
+                        <img src="{{ img.image.url }}" class="img-thumbnail" alt="" width="450px">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 <script  type="text/javascript">
