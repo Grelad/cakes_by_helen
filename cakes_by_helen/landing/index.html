@@ -1,23 +1,42 @@
-<!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
+<script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <style>.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}.gm-style .gm-style-mtc ul,.gm-style .gm-style-mtc li{box-sizing:border-box}
+
+    </style>
+    <style>.gm-control-active>img{box-sizing:content-box;display:none;left:50%;pointer-events:none;position:absolute;top:50%;transform:translate(-50%,-50%)}.gm-control-active>img:nth-child(1){display:block}.gm-control-active:hover>img:nth-child(1),.gm-control-active:active>img:nth-child(1){display:none}.gm-control-active:hover>img:nth-child(2),.gm-control-active:active>img:nth-child(3){display:block}
+
+    </style>
+    <style>.gm-style .gm-style-cc a,.gm-style .gm-style-cc button,.gm-style .gm-style-cc span,.gm-style .gm-style-mtc div{font-size:10px;box-sizing:border-box}
+
+    </style>
     <style>
-<!--        body {-->
-<!--            font-family: arial;-->
-<!--            margin: 0;-->
-<!--            padding: 0;-->
-<!--            box-sizing: border-box;-->
-<!--        }-->
+        @media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}
+    </style>
+    <style>.gm-ui-hover-effect{opacity:.6}.gm-ui-hover-effect:hover{opacity:1}
 
-<!--        .main-site {-->
-<!--            padding-top: 5px;-->
-<!--            width: 95%;-->
-<!--            max-width: 960px;-->
-<!--            margin: 0 auto;-->
-<!--        }-->
+    </style>
+    <style>.gm-style .transit-container{background-color:white;max-width:265px;overflow-x:hidden}.gm-style .transit-container .transit-title span{font-size:14px;font-weight:500}.gm-style .transit-container .transit-title{padding-bottom:6px}.gm-style .transit-container .transit-wheelchair-icon{background:transparent url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png');background-size:59px 492px;display:inline-block;background-position:-5px -450px;width:13px;height:13px}.gm-style.gm-china .transit-container .transit-wheelchair-icon{background-image:url('http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6.png')}@media (-webkit-min-device-pixel-ratio:1.2),(min-resolution:1.2dppx),(min-resolution:116dpi){.gm-style .transit-container .transit-wheelchair-icon{background-image:url('https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6_hdpi.png');background-size:59px 492px;display:inline-block;background-position:-5px -449px;width:13px;height:13px}.gm-style.gm-china .transit-container .transit-wheelchair-icon{background-image:url('http://maps.gstatic.cn/mapfiles/api-3/images/mapcnt6_hdpi.png')}}.gm-style .transit-container div{background-color:white;font-size:11px;font-weight:300;line-height:15px}.gm-style .transit-container .transit-line-group{overflow:hidden;margin-right:-6px}.gm-style .transit-container .transit-line-group-separator{border-top:1px solid #e6e6e6;padding-top:5px}.gm-style .transit-container .transit-nlines-more-msg{color:#999;margin-top:-3px;padding-bottom:6px}.gm-style .transit-container .transit-line-group-vehicle-icons{display:inline-block;padding-right:10px;vertical-align:top;margin-top:1px}.gm-style .transit-container .transit-line-group-content{display:inline-block;min-width:100px;max-width:228px;margin-bottom:-3px}.gm-style .transit-container .transit-clear-lines{clear:both}.gm-style .transit-container .transit-div-line-name{float:left;padding:0 6px 6px 0;white-space:nowrap}.gm-style .transit-container .transit-div-line-name .gm-transit-long{width:107px}.gm-style .transit-container .transit-div-line-name .gm-transit-medium{width:50px}.gm-style .transit-container .transit-div-line-name .gm-transit-short{width:37px}.gm-style .transit-div-line-name .renderable-component-icon{float:left;margin-right:2px}.gm-style .transit-div-line-name .renderable-component-color-box{background-image:url(https://maps.gstatic.com/mapfiles/transparent.png);height:10px;width:4px;float:left;margin-top:3px;margin-right:3px;margin-left:1px}.gm-style.gm-china .transit-div-line-name .renderable-component-color-box{background-image:url(http://maps.gstatic.cn/mapfiles/transparent.png)}.gm-style .transit-div-line-name .renderable-component-text{text-align:left;overflow:hidden;text-overflow:ellipsis;display:block}.gm-style .transit-div-line-name .renderable-component-text-box{overflow:hidden;text-overflow:ellipsis;display:block;font-size:8pt;font-weight:400;text-align:center;padding:1px 2px}.gm-style .transit-div-line-name .renderable-component-text-box-white{border:solid 1px #ccc;background-color:white;padding:0 2px}.gm-style .transit-div-line-name .renderable-component-bold{font-weight:400}
 
+    </style>
+    <style>.poi-info-window div,.poi-info-window a{color:#333;font-family:Roboto,Arial;font-size:13px;background-color:white;-moz-user-select:text;-webkit-user-select:text;-ms-user-select:text;user-select:text}.poi-info-window{cursor:default}.poi-info-window a:link{text-decoration:none;color:#427fed}.poi-info-window .view-link,.poi-info-window a:visited{color:#427fed}.poi-info-window .view-link:hover,.poi-info-window a:hover{cursor:pointer;text-decoration:underline}.poi-info-window .full-width{width:180px}.poi-info-window .title{overflow:hidden;font-weight:500;font-size:14px}.poi-info-window .address{margin-top:2px;color:#555}
+
+    </style>
+    <style>.gm-style .gm-style-iw{font-weight:300;font-size:13px;overflow:hidden}.gm-style .gm-style-iw-a{position:absolute;width:9999px;height:0}.gm-style .gm-style-iw-t{position:absolute;width:100%}.gm-style .gm-style-iw-t::after{background:linear-gradient(45deg,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);box-shadow:-2px 2px 2px 0 rgba(178,178,178,.4);content:"";height:15px;left:0;position:absolute;top:0;transform:translate(-50%,-50%) rotate(-45deg);width:15px}.gm-style .gm-style-iw-c{position:absolute;box-sizing:border-box;overflow:hidden;top:0;left:0;transform:translate(-50%,-100%);background-color:white;border-radius:8px;padding:12px;box-shadow:0 2px 7px 1px rgba(0,0,0,0.3)}.gm-style .gm-style-iw-d{box-sizing:border-box;overflow:auto}.gm-style .gm-style-iw-d::-webkit-scrollbar{width:18px;height:12px;-webkit-appearance:none}.gm-style .gm-style-iw-d::-webkit-scrollbar-track,.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece{background:#fff}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb{background-color:rgba(0,0,0,0.12);border:6px solid transparent;border-radius:9px;background-clip:content-box}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:horizontal{border:3px solid transparent}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-thumb:hover{background-color:rgba(0,0,0,0.3)}.gm-style .gm-style-iw-c .gm-style-iw-d::-webkit-scrollbar-corner{background:transparent}.gm-style .gm-iw{color:#2c2c2c}.gm-style .gm-iw b{font-weight:400}.gm-style .gm-iw a:link,.gm-style .gm-iw a:visited{color:#4272db;text-decoration:none}.gm-style .gm-iw a:hover{color:#4272db;text-decoration:underline}.gm-style .gm-iw .gm-title{font-weight:400;margin-bottom:1px}.gm-style .gm-iw .gm-basicinfo{line-height:18px;padding-bottom:12px}.gm-style .gm-iw .gm-website{padding-top:6px}.gm-style .gm-iw .gm-photos{padding-bottom:8px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style .gm-iw .gm-sv,.gm-style .gm-iw .gm-ph{cursor:pointer;height:50px;width:100px;position:relative;overflow:hidden}.gm-style .gm-iw .gm-sv{padding-right:4px}.gm-style .gm-iw .gm-wsv{cursor:pointer;position:relative;overflow:hidden}.gm-style .gm-iw .gm-sv-label,.gm-style .gm-iw .gm-ph-label{cursor:pointer;position:absolute;bottom:6px;color:#fff;font-weight:400;text-shadow:rgba(0,0,0,0.7) 0 1px 4px;font-size:12px}.gm-style .gm-iw .gm-stars-b,.gm-style .gm-iw .gm-stars-f{height:13px;font-size:0}.gm-style .gm-iw .gm-stars-b{position:relative;background-position:0 0;width:65px;top:3px;margin:0 5px}.gm-style .gm-iw .gm-rev{line-height:20px;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none}.gm-style.gm-china .gm-iw .gm-rev{display:none}.gm-style .gm-iw .gm-numeric-rev{font-size:16px;color:#dd4b39;font-weight:400}.gm-style .gm-iw.gm-transit{margin-left:15px}.gm-style .gm-iw.gm-transit td{vertical-align:top}.gm-style .gm-iw.gm-transit .gm-time{white-space:nowrap;color:#676767;font-weight:bold}.gm-style .gm-iw.gm-transit img{width:15px;height:15px;margin:1px 5px 0 -20px;float:left}
+
+    </style>
+    <style>
+        .gm-iw {text-align:left;}.gm-iw .gm-numeric-rev {float:left;}.gm-iw .gm-photos,.gm-iw .gm-rev {direction:ltr;}.gm-iw .gm-stars-f, .gm-iw .gm-stars-b {background:url("https://maps.gstatic.com/mapfiles/api-3/images/review_stars_hdpi.png") no-repeat;background-size: 65px 26px;float:left;}.gm-iw .gm-stars-f {background-position:left -13px;}.gm-iw .gm-sv-label,.gm-iw .gm-ph-label {left: 4px;}
+    </style>
+    <link type="text/css" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700">
+    <style>.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+
+    </style>
+    <style>.gm-style img{max-width: none;}.gm-style {font: 400 11px Roboto, Arial, sans-serif; text-decoration: none;}
+    </style>
+    <style>
         #popup-1 {
             display: none;
             background-color: rgba(0,0,0,0.5);
@@ -44,22 +63,1631 @@
             top: 5vh;
         }
     </style>
-    <script
-                src="https://code.jquery.com/jquery-3.3.1.js"
-                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-                crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-                crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-                crossorigin="anonymous"></script>
-    <script  type="text/javascript" src="static/js/submit_form.js"></script>
-	{% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="static/ico/manifest.json">
+    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Cakes by Helen</title>
+
+    <!-- CSS Plugins -->
+    <link rel="stylesheet" href="static/css/all.min.css">
+    <link rel="stylesheet" href="static/css/lightbox.css">
+    <link rel="stylesheet" href="static/css/flickity.css">
+
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/theme.css">
+
+	<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+<!--	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--			integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"-->
+<!--			crossorigin="anonymous"></script>-->
+	<script type="text/javascript" src="static/js/submit_form.js"></script>
 </head>
 <body>
-    <div id="popup-1">
+
+<!-- NAVBAR
+================================================== -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+    <div class="container">
+
+        <!-- Navbar: Brand -->
+        <a class="navbar-brand d-lg-none" href="index.html">Cakes by Helen</a>
+
+        <!-- Navbar: Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar: Collapse -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Navbar navigation: Left -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="nav-item__menu">
+                        <a class="dropdown-item" href="menu.html">{% trans "Classic cakes" %}</a>
+                        <a class="dropdown-item" href="menu_no-images.html">{% trans "Designer Cakes" %}</a>
+                        <a class="dropdown-item" href="menu_no-images.html">{% trans "Other" %}</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about-us.html">{% trans "Gallery" %}</a>
+                </li>
+            </ul>
+
+            <!-- Navbar: Brand -->
+            <a class="navbar-brand d-none d-lg-flex" href="index.html">
+                Cakes by Helen
+            </a>
+
+            <!-- Navbar navigation: Right -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="rules.html">{% trans "Rules" %}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact-us.html">{% trans "Contact" %}</a>
+                </li>
+            </ul>
+
+        </div> <!-- / .navbar-collapse -->
+
+    </div> <!-- / .container -->
+</nav> <!-- / .navbar -->
+
+<!-- WELCOME
+================================================== -->
+<section class="section section_welcome" data-parallax="scroll" data-image-src="static/img/main.jpg">
+
+    <!-- Content -->
+    <div class="section_welcome__main">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+
+                    <!-- Heading -->
+                    <h1 class="section__heading section_welcome__heading text-center">
+                        <img class="logo" src="static/img/logo.png" alt="...">
+                    </h1>
+                    <p class="section__subheading section_welcome__subheading text-center text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non illo, alias animi iusto neque,
+                        sint corrupti? Laudantium, dignissimos id excepturi facilis, facere saepe quasi placeat
+                        praesentium ipsa sapiente illo molestiae?
+                    </p>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </div>
+
+    <!-- Footer -->
+    <div class="section_welcome__footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md">
+
+                    <!-- Social links -->
+                    <ul class="section_welcome__footer__social text-center text-lg-left">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md">
+
+<!--                    &lt;!&ndash; Address &ndash;&gt;-->
+<!--                    <div class="section_welcome__footer__address text-center text-lg-right">-->
+<!--                        <i class="fas fa-map-marker-alt"></i> text could be here-->
+<!--                    </div>-->
+
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </div>
+
+</section>
+
+<!-- DISCOVER
+================================================== -->
+<section class="section section_discover section_no-padding_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 align-self-start">
+
+                <!-- Description -->
+                <p class="section_discover__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+
+            </div>
+            <div class="col-md-4 align-self-start">
+
+                <!-- Image -->
+                <div class="section_discover__img">
+                    <img src="static/img/2.jpg" class="img-fluid" alt="...">
+                </div>
+
+            </div>
+            <div class="col-md-6 align-self-center">
+
+                <!-- Content -->
+                <h2><em>Lorem ipsum</em> dolor sit amet</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis nisi, consequatur,
+                    laborum libero a neque ducimus. Porro rem illum quo nostrum quisquam asperiores, blanditiis,
+                    consectetur. Possimus facilis velit, voluptatibus!
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- DISCOVER
+================================================== -->
+<section class="section section_discover">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 order-md-2 align-self-end">
+
+                <!-- Description -->
+                <p class="section_discover__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+
+            </div>
+            <div class="col-md-4 order-md-3 align-self-start">
+
+                <!-- Image -->
+                <div class="section_discover__img alt">
+                    <img src="static/img/7.jpg" class="img-fluid" alt="...">
+                </div>
+
+            </div>
+            <div class="col-md-6 order-md-1 align-self-center">
+
+                <!-- Content -->
+                <h2><em>Velit ipsa</em> quidem debitis amet</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quae similique asperiores
+                    consequatur! Nihil temporibus qui enim, ab voluptates corporis commodi eum maxime. Accusamus
+                    voluptates a, et quidem! Quo, et?
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- ABOUT
+================================================== -->
+<section class="section section_about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+                <!-- Description -->
+                <p class="section_about__description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam placeat molestiae ab, consectetur.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- MENU
+================================================== -->
+<section class="section section_menu section_border_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading text-center">
+                    Our menu
+                </h2>
+                <p class="section__subheading text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ratione numquam eos perferendis itaque hic unde, ad, laudantium minima.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row">
+            <div class="col">
+
+                <!-- Navigation -->
+                <nav class="section_menu__nav">
+                    <ul>
+                        <li class="active">
+                            <a href="#menu_images" data-filter=".mains">Mains</a>
+                        </li>
+                        <li>
+                            <a href="#menu_images" data-filter=".lunch">Lunch</a>
+                        </li>
+                        <li>
+                            <a href="#menu_images" data-filter=".dinner">Dinner</a>
+                        </li>
+                        <li>
+                            <a href="#menu_images" data-filter=".drinks">Drinks</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <div class="row section_menu__grid" id="menu_images" style="position: relative; height: 509.7px;">
+
+            <div class="col-md-6 section_menu__grid__item mains" style="position: absolute; left: 0px; top: 0px;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/26.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $15
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item lunch" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/31.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce id ante ut arcu</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $23
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item dinner" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/27.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce sed dolor eget tortor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $16
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item drinks" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/28.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Phasellus non elit in dolor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $10
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item drinks" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/29.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>In vel odio eu massa semper</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $35
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item dinner" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/28.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Morbi ac est consectetur</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $18
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item lunch" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/30.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $15
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item mains" style="position: absolute; left: 480px; top: 0px;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/27.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce id ante ut arcu</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $23
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item mains" style="position: absolute; left: 480px; top: 150.7px;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/28.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce sed dolor eget tortor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $16
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item lunch" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/29.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Phasellus non elit in dolor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $10
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item dinner" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/29.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>In vel odio eu massa semper</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $35
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item drinks" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/30.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Morbi ac est consectetur</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $18
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item mains" style="position: absolute; left: 0px; top: 179.5px;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/29.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $15
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item lunch" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/28.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce id ante ut arcu</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $23
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item dinner" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/30.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce sed dolor eget tortor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $16
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item drinks" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/31.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Phasellus non elit in dolor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $10
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item drinks" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/26.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>In vel odio eu massa semper</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $35
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item dinner" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/31.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Morbi ac est consectetur</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $18
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item lunch" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/27.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Lorem ipsum dolor sit amet</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $15
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item mains" style="position: absolute; left: 480px; top: 301.4px;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/30.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce id ante ut arcu</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $23
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item mains" style="position: absolute; left: 0px; top: 359px;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/31.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Fusce sed dolor eget tortor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $16
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item lunch" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/26.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Phasellus non elit in dolor</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $10
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item dinner" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/26.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>In vel odio eu massa semper</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $35
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+            <div class="col-md-6 section_menu__grid__item drinks" style="position: absolute; display: none;">
+                <div class="section_menu__item">
+                    <div class="row">
+                        <div class="col-3 align-self-center">
+                            <div class="section_menu__item__img">
+                                <img src="static/img/27.jpg" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <h4>Morbi ac est consectetur</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente
+                                laudantium.
+                            </p>
+                        </div>
+                        <div class="col-2">
+                            <div class="section_menu__item__price text-center">
+                                $18
+                            </div>
+                        </div>
+                    </div> <!-- / .row -->
+                </div>
+            </div>
+
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- RESERVATION
+================================================== -->
+<section class="section section_reservation section_gray" id="section_reservation">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading text-center">
+                    Make online reservation
+                </h2>
+
+                <!-- Subheading -->
+                <p class="section__subheading text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum,
+                    beatae maiores quae qui.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row justify-content-lg-center  section_reservation__row">
+            <div class="col-lg-8">
+
+                <!-- Form -->
+                <form class="section_reservation__form" id="reservation__form">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label class="sr-only" for="reservation__form__name">Full name</label>
+                                <input type="text" class="form-control" id="reservation__form__name"
+                                       name="reservation__form__name" placeholder="Full name">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="reservation__form__phone">Phone number</label>
+                                <input type="tel" class="form-control" id="reservation__form__phone"
+                                       name="reservation__form__phone" placeholder="Phone number">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="reservation__form__email">E-mail address</label>
+                                <input type="email" class="form-control" id="reservation__form__email"
+                                       name="reservation__form__email" placeholder="E-mail address">
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label class="sr-only" for="reservation__form__people">People</label>
+                                <select class="form-control" id="reservation__form__people"
+                                        name="reservation__form__people">
+                                    <option value="1">1 person</option>
+                                    <option value="2" selected="">2 persons</option>
+                                    <option value="3">3 persons</option>
+                                    <option value="4">4 persons</option>
+                                    <option value="5">5 persons</option>
+                                </select>
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="reservation__form__date">Date</label>
+                                <input type="date" class="form-control" id="reservation__form__date"
+                                       name="reservation__form__date" value="2016-12-31">
+                                <div class="invalid-feedback"></div>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="reservation__form__time">Time</label>
+                                <input type="time" class="form-control" id="reservation__form__time"
+                                       name="reservation__form__time" value="18:00">
+                                <div class="invalid-feedback"></div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    Reserve a table
+                                </button>
+                            </div>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </form>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- TESTIMONIALS
+================================================== -->
+<section class="section section_testimonials section_border_bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading text-center">
+                    What clients say about us
+                </h2>
+
+                <!-- Subheading -->
+                <p class="section__subheading text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row">
+            <div class="col">
+                <div class="section_testimonials__carousel flickity-enabled is-draggable" tabindex="0">
+
+
+                    <div class="flickity-viewport" style="height: 210px; touch-action: pan-y;">
+                        <div class="flickity-slider" style="left: 0px; transform: translateX(-300%);">
+                            <div class="section_testimonials__carousel__item text-center text-md-left is-selected"
+                                 style="position: absolute; left: 300%;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3 order-md-3">
+
+                                        <!-- Photo -->
+                                        <div class="section_testimonials__photo">
+                                            <img src="static/img/20.jpg" class="img-fluid" alt="...">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-7 order-md-2">
+
+                                        <!-- Blockquote -->
+                                        <blockquote class="section_testimonials__blockquote mx-auto">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
+                                                veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore
+                                                perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+                                            </p>
+                                            <footer class="text-muted">
+                                                Richard Roe
+                                            </footer>
+                                        </blockquote>
+
+                                    </div>
+                                    <div class="col-md-1 order-md-1"></div>
+                                </div> <!-- / .row -->
+                            </div>
+                            <div class="section_testimonials__carousel__item text-center text-md-left"
+                                 aria-hidden="true" style="position: absolute; left: 100%;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3 order-md-3">
+
+                                        <!-- Photo -->
+                                        <div class="section_testimonials__photo">
+                                            <img src="static/img/21.jpg" class="img-fluid" alt="...">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-7 order-md-2">
+
+                                        <!-- Blockquote -->
+                                        <blockquote class="section_testimonials__blockquote mx-auto">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
+                                                veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore
+                                                perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+                                            </p>
+                                            <footer class="text-muted">
+                                                Elisabeth Doe
+                                            </footer>
+                                        </blockquote>
+
+                                    </div>
+                                    <div class="col-md-1 order-md-1"></div>
+                                </div> <!-- / .row -->
+                            </div>
+                            <div class="section_testimonials__carousel__item text-center text-md-left"
+                                 aria-hidden="true" style="position: absolute; left: 200%;">
+                                <div class="row align-items-center">
+                                    <div class="col-md-3 order-md-3">
+
+                                        <!-- Photo -->
+                                        <div class="section_testimonials__photo">
+                                            <img src="static/img/22.jpg" class="img-fluid" alt="...">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-7 order-md-2">
+
+                                        <!-- Blockquote -->
+                                        <blockquote class="section_testimonials__blockquote mx-auto">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at
+                                                veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore
+                                                perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+                                            </p>
+                                            <footer class="text-muted">
+                                                Monica Roe
+                                            </footer>
+                                        </blockquote>
+
+                                    </div>
+                                    <div class="col-md-1 order-md-1"></div>
+                                </div> <!-- / .row -->
+                            </div>
+                        </div>
+                    </div>
+                    <button class="flickity-button flickity-prev-next-button previous" type="button"
+                            aria-label="Previous">
+                        <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                        </svg>
+                    </button>
+                    <button class="flickity-button flickity-prev-next-button next" type="button" aria-label="Next">
+                        <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                            <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"
+                                  transform="translate(100, 100) rotate(180) "></path>
+                        </svg>
+                    </button>
+                    <ol class="flickity-page-dots">
+                        <li class="dot is-selected" aria-label="Page dot 1" aria-current="step"></li>
+                        <li class="dot" aria-label="Page dot 2"></li>
+                        <li class="dot" aria-label="Page dot 3"></li>
+                    </ol>
+                </div> <!-- / .carousel -->
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- EVENTS
+================================================== -->
+<section class="section section_events section_no-padding_bottom">
+
+    <!-- Intro -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading text-center">
+                    Upcoming events
+                </h2>
+
+                <!-- Subheading -->
+                <p class="section__subheading text-center">
+                    Commodi rem veritatis quis eaque mollitia.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+
+    <!-- Events -->
+    <div class="section_events__items">
+
+        <!-- Event #1 -->
+        <div class="section_events__item active">
+
+            <!-- Bg image -->
+            <div class="section_events__item__bg" style="background-image: url(static/img/8.jpg)"></div>
+
+            <!-- Content -->
+            <div class="container">
+
+                <!-- Content: Large -->
+                <div class="section_events__item__content_lg">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-5">
+
+                            <!-- Date -->
+                            <h3 class="section__preheading text-primary">
+                                <time datetime="2017-09-30">September 30, 2017</time>
+                            </h3>
+
+                            <!-- Heading -->
+                            <h2 class="section__heading text-white">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+                            </h2>
+
+                            <!-- Description -->
+                            <p class="section__subheading">
+                                Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere
+                                est optio, voluptate molestias aspernatur impedit perferendis odit?
+                            </p>
+
+                            <!-- Button -->
+                            <a href="#section_reservation" class="btn btn-primary text-white">
+                                Reserve a table
+                            </a>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div> <!-- / .section_events__item__content_lg -->
+
+                <!-- Content: Small -->
+                <div class="section_events__item__content_sm">
+                    <div class="row">
+                        <div class="col-3 col-md-2 col-lg-1">
+
+                            <!-- Date -->
+                            <time datetime="2017-09-30">
+                                30 <small>Sep</small>
+                            </time>
+
+                        </div>
+                        <div class="col-9 col-md-7 col-lg-8">
+
+                            <!-- Heading -->
+                            <h4>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+                            </h4>
+
+                        </div>
+                        <div class="col-9 ml-auto col-md-3 text-md-right">
+
+                            <!-- Button -->
+                            <a href="#section_reservation" class="btn btn-primary">
+                                Reserve a table
+                            </a>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div> <!-- / .section_events__item__content_sm -->
+
+            </div> <!-- / .container -->
+
+        </div> <!-- / .section_events__item -->
+
+        <!-- Event #2 -->
+        <div class="section_events__item">
+
+            <!-- Bg image -->
+            <div class="section_events__item__bg" style="background-image: url(static/img/9.jpg)"></div>
+
+            <!-- Content -->
+            <div class="container">
+
+                <!-- Content: Large -->
+                <div class="section_events__item__content_lg">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-5">
+
+                            <!-- Date -->
+                            <h3 class="section__preheading text-primary">
+                                <time datetime="2017-09-29">September 29, 2017</time>
+                            </h3>
+
+                            <!-- Heading -->
+                            <h2 class="section__heading text-white">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+                            </h2>
+
+                            <!-- Description -->
+                            <p class="section__subheading">
+                                Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere
+                                est optio, voluptate molestias aspernatur impedit perferendis odit?
+                            </p>
+
+                            <!-- Button -->
+                            <a href="#section_reservation" class="btn btn-primary text-white">
+                                Reserve a table
+                            </a>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div> <!-- / .section_events__item__content_lg -->
+
+                <!-- Content: Small -->
+                <div class="section_events__item__content_sm">
+                    <div class="row">
+                        <div class="col-3 col-md-2 col-lg-1">
+
+                            <!-- Date -->
+                            <time datetime="2017-09-29">
+                                29 <small>Sep</small>
+                            </time>
+
+                        </div>
+                        <div class="col-9 col-md-7 col-lg-8">
+
+                            <!-- Heading -->
+                            <h4>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+                            </h4>
+
+                        </div>
+                        <div class="col-9 ml-auto col-md-3 text-md-right">
+
+                            <!-- Button -->
+                            <a href="#section_reservation" class="btn btn-primary">
+                                Reserve a table
+                            </a>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div> <!-- / .section_events__item__content_sm -->
+
+            </div> <!-- / .container -->
+
+        </div> <!-- / .section_events__item -->
+
+        <!-- Event #3 -->
+        <div class="section_events__item">
+
+            <!-- Bg image -->
+            <div class="section_events__item__bg" style="background-image: url(static/img/10.jpg)"></div>
+
+            <!-- Content -->
+            <div class="container">
+
+                <!-- Content: Large -->
+                <div class="section_events__item__content_lg">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-5">
+
+                            <!-- Date -->
+                            <h3 class="section__preheading text-primary">
+                                <time datetime="2017-09-28">September 28, 2017</time>
+                            </h3>
+
+                            <!-- Heading -->
+                            <h2 class="section__heading text-white">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+                            </h2>
+
+                            <!-- Description -->
+                            <p class="section__subheading">
+                                Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere
+                                est optio, voluptate molestias aspernatur impedit perferendis odit?
+                            </p>
+
+                            <!-- Button -->
+                            <a href="#section_reservation" class="btn btn-primary text-white">
+                                Reserve a table
+                            </a>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div> <!-- / .section_events__item__content_lg -->
+
+                <!-- Content: Small -->
+                <div class="section_events__item__content_sm">
+                    <div class="row">
+                        <div class="col-3 col-md-2 col-lg-1">
+
+                            <!-- Date -->
+                            <time datetime="2017-09-28">
+                                28 <small>Sep</small>
+                            </time>
+
+                        </div>
+                        <div class="col-9 col-md-7 col-lg-8">
+
+                            <!-- Heading -->
+                            <h4>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+                            </h4>
+
+                        </div>
+                        <div class="col-9 ml-auto col-md-3 text-md-right">
+
+                            <!-- Button -->
+                            <a href="#section_reservation" class="btn btn-primary">
+                                Reserve a table
+                            </a>
+
+                        </div>
+                    </div> <!-- / .row -->
+                </div> <!-- / .section_events__item__content_sm -->
+
+            </div> <!-- / .container -->
+
+        </div> <!-- / .section_events__item -->
+
+    </div> <!-- / .section_events_items -->
+
+</section>
+
+<!-- NEWSLETTER
+================================================== -->
+<section class="section section_gray section_newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading section_newsletter__heading text-center">
+                    Newsletter
+                </h2>
+                <p class="section__subheading text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum,
+                    beatae maiores quae qui.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+                <!-- Form -->
+                <div id="mc_embed_signup">
+                    <form class="section_newsletter__form validate"
+                          action="//simpleqode.us15.list-manage.com/subscribe/post-json?u=507744bbfd1cc2879036c7780&amp;id=4523d25e1b&amp;c=?"
+                          method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
+                          novalidate="">
+                        <div id="mc_embed_signup_scroll" class="row">
+                            <div class="mc-field-group form-group col-md-9">
+                                <label for="mce-EMAIL" class="sr-only">E-mail address</label>
+                                <input type="email" value="" name="EMAIL" class="required email form-control"
+                                       id="mce-EMAIL" placeholder="Email address">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response"></div>
+                                <div class="response" id="mce-success-response"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div aria-hidden="true" id="mce-hidden-input">
+                                <input type="text" name="b_507744bbfd1cc2879036c7780_4523d25e1b" tabindex="-1" value="">
+                            </div>
+                            <div class="clear col-md-3 text-center">
+                                <button type="submit" class="btn btn-primary" id="mc-embedded-subscribe">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div> <!-- #mc_embed_signup -->
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- NEWSLETTER CLONE
+================================================== -->
+<!--
+    MailChimp newsletters generally cannot be used more than
+    once on a page, because this will cause HTML IDs conflict.
+    This section solves this problem by calling the
+    original sign-up form and imitating its behaviour. Please
+    don't use it without the original sign-up form. Remove
+    d-none to make it visible.
+-->
+<section class="section section_gray section_newsletter d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading section_newsletter__heading text-center">
+                    Newsletter
+                </h2>
+                <p class="section__subheading text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum,
+                    beatae maiores quae qui.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+
+                <!-- Form -->
+                <form class="section_newsletter__form section_newsletter__form_clone">
+                    <div class="row">
+                        <div class="form-group col-md-9">
+                            <label class="sr-only">E-mail address</label>
+                            <input type="email" class="form-control" placeholder="Email address">
+                        </div>
+                        <div class="col-md-3 text-center">
+                            <button type="submit" class="btn btn-primary">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- GALLERY
+================================================== -->
+<section class="section section_gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <!-- Heading -->
+                <h2 class="section__heading text-center">
+                    Our gallery
+                </h2>
+
+                <!-- Subheading -->
+                <p class="section__subheading text-center">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row section_gallery__grid" style="position: relative; height: 686.525px;">
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 0px; top: 0px;">
+
+                <a href="static/img/11.jpg" data-lightbox="gallery">
+                    <img src="static/img/11.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 319.987px; top: 0px;">
+
+                <a href="static/img/16.jpg" data-lightbox="gallery">
+                    <img src="static/img/16.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 639.974px; top: 0px;">
+
+                <a href="static/img/13.jpg" data-lightbox="gallery">
+                    <img src="static/img/13.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 0px; top: 217.363px;">
+
+                <a href="static/img/15.jpg" data-lightbox="gallery">
+                    <img src="static/img/15.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 639.974px; top: 218.325px;">
+
+                <a href="static/img/14.jpg" data-lightbox="gallery">
+                    <img src="static/img/14.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 0px; top: 434.088px;">
+
+                <a href="static/img/18.jpg" data-lightbox="gallery">
+                    <img src="static/img/18.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 639.974px; top: 462.063px;">
+
+                <a href="static/img/17.jpg" data-lightbox="gallery">
+                    <img src="static/img/17.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-4 section_gallery__grid__item"
+                 style="position: absolute; left: 319.987px; top: 472.475px;">
+
+                <a href="static/img/12.jpg" data-lightbox="gallery">
+                    <img src="static/img/12.jpg" class="img-fluid" alt="...">
+                </a>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+
+<!-- FOOTER
+================================================== -->
+<footer class="section section_footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+
+                <!-- About Us -->
+                <h5 class="section_footer__heading">
+                    About Us
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum,
+                    possimus unde eos vitae eius quasi saepe.
+                </p>
+
+            </div>
+            <div class="col-sm-4">
+
+                <!-- Contact info -->
+                <h5 class="section_footer__heading">
+                    Contact info
+                </h5>
+                <ul class="section_footer__info">
+                    <li>
+                        <i class="fas fa-phone"></i> +1 987 654 3210
+                    </li>
+                    <li>
+                        <i class="far fa-envelope"></i> <a href="mailto:admin@domain.com">admin@domain.com</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col-sm-4">
+
+                <!-- Opening hours -->
+                <h5 class="section_footer__heading">
+                    Opening hours
+                </h5>
+                <div class="section_footer__open">
+                    <div class="section_footer__open__days">Monday - Thursday</div>
+                    <div class="section_footer__open__time">10:00 AM - 11:00 PM</div>
+                </div>
+                <div class="section_footer__open">
+                    <div class="section_footer__open__days">Friday - Sunday</div>
+                    <div class="section_footer__open__time">12:00 AM - 03:00 AM</div>
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Copyright -->
+                <div class="section_footer__copyright">
+                    © <span id="js-current-year">2021</span> Cakes by Helen. All rights reserved.
+                </div>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</footer>
+
+<!-- JAVASCRIPT
+================================================== -->
+
+<!-- JS Global -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<script src="static/js/bootstrap.bundle.min.js"></script>
+
+<!-- JS Plugins -->
+<script src="static/js/parallax.min.js"></script>
+<script src="static/js/imagesloaded.pkgd.min.js"></script>
+<script src="static/js/isotope.pkgd.min.js"></script>
+<script src="static/js/flickity.pkgd.min.js"></script>
+<script src="static/js/lightbox.js"></script>
+<script src="static/js/reservation.js"></script>
+<script src="static/js/alerts.js"></script>
+
+<!-- JS Custom -->
+<script src="static/js/theme.js"></script>
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
+<div id="lightbox" class="lightbox" style="display: none;">
+    <div class="lb-outerContainer">
+        <div class="lb-container"><img class="lb-image"
+                                       src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+            <div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div>
+            <div class="lb-loader"><a class="lb-cancel"></a></div>
+        </div>
+    </div>
+    <div class="lb-dataContainer">
+        <div class="lb-data">
+            <div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div>
+            <div class="lb-closeContainer"><a class="lb-close"></a></div>
+        </div>
+    </div>
+</div>
+<!--<div class="row">-->
+<!--        {% for img in images %}-->
+<!--            <div class="col-lg-3 col-md-4 col-xs-6">-->
+<!--                <a href="#" class="d-block mb-4 h-100">-->
+<!--                    <img src="{{ img.image.url }}" class="img-thumbnail" alt="" width="450px">-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+<div id="popup-1">
         <div class="popup-content">
             <h1>Popup Title</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -95,174 +1723,18 @@
             <button id="close-popup-1">Close</button>
         </div>
     </div>
-
-    <div class="parallax-mirror" style="visibility: visible; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; transform: translate3d(0px, 0px, 0px); height: 700px; width: 1046px;">
-        <img class="parallax-slider" src="media/1.jpg" style="transform: translate3d(-1px, 0px, 0px); position: absolute; height: 700px; width: 1049px; max-width: none;">
-    </div>
-
-	<!-- NAVBAR
-	================================================== -->
-	<nav class="navbar navbar-expand-lg fixed-top navbar-light">
-		<div class="container">
-
-			<!-- Navbar: Brand -->
-			<a class="navbar-brand d-lg-none" href="index.html">Touché</a>
-
-			<!-- Navbar: Toggler -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<!-- Navbar: Collapse -->
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-				<!-- Navbar navigation: Left -->
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="about-us.html">About Us</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Menu
-						</a>
-						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
-							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
-							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="reservation.html">Reservation</a>
-					</li>
-				</ul>
-
-				<!-- Navbar: Brand -->
-				<a class="navbar-brand d-none d-lg-flex" href="index.html">
-					Touché
-				</a>
-
-				<!-- Navbar navigation: Right -->
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="news-and-events.html">News &amp; Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="gallery.html">Gallery</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact-us.html">Contact</a>
-					</li>
-				</ul>
-
-			</div> <!-- / .navbar-collapse -->
-
-		</div> <!-- / .container -->
-	</nav> <!-- / .navbar -->
-
-	<!-- WELCOME
-	================================================== -->
-	<section class="section section_welcome" data-parallax="scroll" data-image-src="media/1.jpg">
-
-		<!-- Content -->
-		<div class="section_welcome__main">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col">
-
-						<!-- Heading -->
-						<h2 class="section__preheading section_welcome__preheading text-center text-muted">
-							<span class="text-primary">Café</span> / Restaurant
-						</h2>
-						<h1 class="section__heading section_welcome__heading text-center">
-							Touché
-						</h1>
-						<p class="section__subheading section_welcome__subheading text-center text-muted">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non illo, alias animi iusto neque, sint corrupti? Laudantium, dignissimos id excepturi facilis, facere saepe quasi placeat praesentium ipsa sapiente illo molestiae?
-						</p>
-
-						<!-- Button -->
-						<div class="text-center">
-							<a href="#section_reservation" class="btn btn-primary text-white">
-								Make reservation
-							</a>
-						</div>
-
-					</div>
-				</div> <!-- / .row -->
-			</div> <!-- / .container -->
-		</div>
-
-		<!-- Footer -->
-		<div class="section_welcome__footer">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-md">
-
-						<!-- Social links -->
-						<ul class="section_welcome__footer__social text-center text-lg-left">
-							<li>
-								<a href="#">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fab fa-instagram"></i>
-								</a>
-							</li>
-						</ul>
-
-					</div>
-					<div class="col-md">
-
-						<!-- Address -->
-						<div class="section_welcome__footer__address text-center text-lg-right">
-							<i class="fas fa-map-marker-alt"></i> 1234 Altschul, New York, NY 10027-0000
-						</div>
-
-					</div>
-				</div> <!-- / .row -->
-			</div> <!-- / .container -->
-		</div>
-
-	</section>
-
-    <div class="main-site">
-        <h1>Webpage</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <button id="open-popup-1">Open Popup</button>
-
-        <div class="row">
-            {% for img in images %}
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                    <a href="#" class="d-block mb-4 h-100">
-                        <img src="{{ img.image.url }}" class="img-thumbnail" alt="" width="450px">
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
 </body>
-<script  type="text/javascript">
-        var popup1 = document.getElementById("popup-1")
-        var openPopup1 = document.getElementById("open-popup-1")
-        var closePopup1 = document.getElementById('close-popup-1')
+<!--<script  type="text/javascript">-->
+<!--        var popup1 = document.getElementById("popup-1")-->
+<!--        var openPopup1 = document.getElementById("open-popup-1")-->
+<!--        var closePopup1 = document.getElementById('close-popup-1')-->
 
-        openPopup1.addEventListener('click', () => {
-            popup1.style.display = "block";
-        })
+<!--        openPopup1.addEventListener('click', () => {-->
+<!--            popup1.style.display = "block";-->
+<!--        })-->
 
-        closePopup1.addEventListener('click', () => {
-            popup1.style.display = "none";
-        })
-    </script>
+<!--        closePopup1.addEventListener('click', () => {-->
+<!--            popup1.style.display = "none";-->
+<!--        })-->
+<!--    </script>-->
 </html>

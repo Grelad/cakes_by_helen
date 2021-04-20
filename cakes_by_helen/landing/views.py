@@ -15,6 +15,16 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 
+def test_template(request):
+    template = loader.get_template('template.html')
+    images = ImageGallery.objects.all()
+    context = {
+        'images': images
+    }
+    return HttpResponse(template.render(context, request))
+
+
+
 def submit_form(request):
     if request.method == 'POST' and request.is_ajax():
         form = OrderForm(request.POST)
