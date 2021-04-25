@@ -83,28 +83,43 @@ body {
     width: auto;
     max-height: calc(70px - 10px - 1rem);
 }
-@media (min-width: 992px)
-{
+@media (min-width: 992px){
     .navbar-brand
     {
-        margin-left: 2rem;
+        margin-right: 1.5rem;
     }
     .navbar:not(.navbar-preview) .dropdown-toggle:after {
         content: none;
     }
 }
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 576px) {
+
+}
+
 .navbar-toggler
 {
     right: 0;
-
     display: inline-flex;
-
     height: 70px;
     padding-top: 0;
     padding-bottom: 0;
 
     align-items: center;
 }
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-dark     .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 .navbar:before
 {
     position: absolute;
@@ -117,7 +132,6 @@ body {
     content: '';
     transition: all .3s;
     transform: translateY(-100%);
-
     background-color: white;
 }
 .navbar-light
@@ -200,14 +214,19 @@ body {
 /* Welcome section */
 
 .welcome_section {
-    padding-top: 140px;
-    padding-bottom: 70px;
+    padding-top: 20%;
+    padding-bottom: 30%;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat, no-repeat;
     background-image: url('../img/main.jpg')
 }
+
+@media (min-width: 992px) {
+
+}
+
 .welcome_section:before {
     position: absolute;
     top: 0;
@@ -227,6 +246,13 @@ body {
         padding-bottom: 0;
     }
 }
+
+@media (max-width: 575.98px) {
+    .welcome_section {
+        padding: 0;
+    }
+}
+
 .section_welcome__heading .logo
 {
     width: 40%;
@@ -271,6 +297,15 @@ body {
     height: 70px;
     margin-top: 3rem;
 }
+
+@media (max-width: 575.98px) {
+    .section_welcome__footer
+    {
+        height: 0;
+        margin: 0;
+    }
+}
+
 .section_welcome__footer > .container
 {
     height: 100%;
@@ -289,7 +324,6 @@ body {
 .section_welcome__footer__social
 {
     padding-left: 0;
-
     list-style-type: none;
 }
 @media (min-width: 768px)
@@ -370,8 +404,8 @@ body {
     border-left: 3px solid black;
     height: 250px;
     position: absolute;
-    margin-left: -2px;
-    left: 122%;
+    margin-left: -3px;
+    left: 135%;
     content: '';
     transform: translateY(15%);
 }
@@ -383,8 +417,8 @@ body {
     z-index: 3;
     color: #663333;
     text-align: center;
-    left: 70%;
-    margin-left: 5px;
+    left: 80%;
+    margin-left: 3%;
     margin-top: 91%;
     width: 100%;
     position: absolute;
@@ -419,7 +453,7 @@ body {
 
     width: 78%;
     height: 725px;
-    left: 83%;
+    left: 95%;
     margin-top: 43%;
 }
 
@@ -427,7 +461,8 @@ body {
     content: url('../img/chocolate_small.png');
     position: absolute;
     width: 100%;
-    transform: translate(135%, 35%);
+    left: 5%;
+    transform: translate(170%, 35%);
 }
 
 .classic_cake_order{
